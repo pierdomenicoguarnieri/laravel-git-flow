@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Museums;
+use App\Models\Museum;
 use Illuminate\Http\Request;
 
 class MuseumsController extends Controller
@@ -13,7 +13,7 @@ class MuseumsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-      $museums = Museums::all();
+      $museums = Museum::all();
       return view('museums.index', compact('museums'));
     }
 
@@ -42,7 +42,7 @@ class MuseumsController extends Controller
      * @param  \App\Models\Museums  $museums
      * @return \Illuminate\Http\Response
      */
-    public function show(Museums $museums){
+    public function show(Museum $museum){
       return view('museums.show', compact('museum'));
     }
 
@@ -52,7 +52,7 @@ class MuseumsController extends Controller
      * @param  \App\Models\Museums  $museums
      * @return \Illuminate\Http\Response
      */
-    public function edit(Museums $museums){
+    public function edit(Museum $museum){
       return view('museums.edit', compact('museum'));
     }
 
@@ -60,10 +60,10 @@ class MuseumsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Museums  $museums
+     * @param  \App\Models\Museum $museums
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Museums $museums){
+    public function update(Request $request, Museum $museums){
 
     }
 
@@ -73,7 +73,7 @@ class MuseumsController extends Controller
      * @param  \App\Models\Museums  $museums
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Museums $museums){
+    public function destroy(Museum $museums){
 
     }
 }

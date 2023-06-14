@@ -7,7 +7,7 @@
 @section('content_museums')
   <main>
     <div class="container my-5">
-      <h1 class="mb-2">Show Museo {{$museum->name}}</h1>
+      <h1 class="mb-2">Show {{$museum->name}}</h1>
 
     </div>
   </main>
