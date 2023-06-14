@@ -4,8 +4,8 @@ return [
   [
     "name" => "Salvador",
     "surname" => "Dalì",
-    "date_of_birth" => "11 maggio 1904",
-    "date_of_death" => "23 gennaio 1989",
+    "date_of_birth" => "1904-04-11",
+    "date_of_death" => "1989-01-23",
     "place_of_birth" => "Figueres",
     "place_of_death" => "Figueres",
     "profession" => [
@@ -30,8 +30,8 @@ return [
   [
     "name" => "Vasilij Vasil'evič",
     "surname" => "Kandinskij",
-    "date_of_birth" => "16 dicembre 1866",
-    "date_of_death" => "13 dicembre 1944",
+    "date_of_birth" => "1866-12-16",
+    "date_of_death" => "1944-12-13",
     "place_of_birth" => "Mosca",
     "place_of_death" => "Neuilly-sur-Seine",
     "profession" => [
@@ -49,8 +49,8 @@ return [
   [
     "name" => "Vincent",
     "surname" => "Van Gogh",
-    "date_of_birth" => "30 marzo 1853",
-    "date_of_death" => "29 luglio 1890",
+    "date_of_birth" => "1853-03-30",
+    "date_of_death" => "1890-07-29",
     "place_of_birth" => "Zundert",
     "place_of_death" => "Auvers-sur-Oise",
     "profession" => [
@@ -72,6 +72,7 @@ return [
     'date_of_birth'=> '1452-03-15',
     'date_of_death'=> '1519-05-02',
     'place_of_death'=> 'Amboise',
+    'place_of_birth'=> 'Amboise',
     'profession'=> [
       "pittore",
       "ingegnere",
@@ -94,6 +95,7 @@ return [
     'date_of_birth'=> '1958-03-04',
     'date_of_death'=> '1990-05-02',
     'place_of_death'=> 'New York',
+    'place_of_birth'=> 'New York',
     'profession'=> [
       "street artist",
   ],
@@ -113,6 +115,7 @@ return [
     'date_of_birth'=> '1862-07-14',
     'date_of_death'=> '1918-02-06',
     'place_of_death'=> 'Vienna',
+    'place_of_birth'=> 'Vienna',
     'profession'=> [
       "Painter",
   ],
