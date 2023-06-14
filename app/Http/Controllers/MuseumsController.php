@@ -22,7 +22,7 @@ class MuseumsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(){
-
+      return view('museums.create');
     }
 
     /**
@@ -31,7 +31,7 @@ class MuseumsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)    {
+    public function store(Request $request){
 
     }
 
@@ -42,7 +42,7 @@ class MuseumsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Museums $museums){
-
+      return view('museums.show');
     }
 
     /**
@@ -52,7 +52,7 @@ class MuseumsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Museums $museums){
-
+      return view('museums.edit');
     }
 
     /**
