@@ -13,7 +13,8 @@ class ArtistController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-      return view('artists.index');
+      $artists = Artist::all();
+      return view('artists.index', compact('artists'));
     }
 
     /**
@@ -42,7 +43,7 @@ class ArtistController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Artist $artist){
-
+      return view('artists.show', compact('artist'));
     }
 
     /**

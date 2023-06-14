@@ -10,10 +10,10 @@
       <h1>Show Artisti</h1>
     </div>
 
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card w-50" style="width: 18rem;">
+      <img class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title">{{ $artist['name'] . $artist['surname'] }}</h5>
+        <h5 class="card-title">{{$artist->name . ' ' . $artist->surname}}</h5>
         <p class="card-text">{{$artist['biography']}}</p>
       </div>
       <ul class="list-group list-group-flush">

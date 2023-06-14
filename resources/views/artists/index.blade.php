@@ -19,14 +19,14 @@
         </tr>
       </thead>
       <tbody>
+        @foreach ($artists as $artist )
         <tr>
-          @foreach ($artists as $artist )
             <th>{{ $artist['id'] }}</th>
             <td>{{ $artist['name'] }}</td>
             <td>{{ $artist['surname'] }}</td>
-            <td><a class="btn" href="{{route('artists.show')}}">Dettagli</a></td>
-          @endforeach
-        </tr>
+            <td><a class="btn" href="{{route('artists.show', $artist)}}">Dettagli</a></td>
+          </tr>
+        @endforeach
       </tbody>
     </table>
   </main>
