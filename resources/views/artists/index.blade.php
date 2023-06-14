@@ -5,11 +5,11 @@
 @endsection
 
 @section('content_artists')
-  <main>
+  <main class="container">
     <div class="container my-5">
       <h1>Index Artisti</h1>
     </div>
-    <table class="table">
+    <table class="table ">
       <thead>
         <tr>
           <th scope="col">ID</th>

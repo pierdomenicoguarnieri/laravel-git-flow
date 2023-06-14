@@ -5,7 +5,7 @@
 @endsection
 
 @section('content_artists')
-  <main>
+  <main class="container">
     <div class="container my-5">
       <h1>Show Artisti</h1>
     </div>
