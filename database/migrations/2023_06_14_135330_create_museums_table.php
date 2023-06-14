@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('name', 50);
             $table->string('founder', 50);
-            $table->string('slug')->unique();
             $table->date('construction_date');
             $table->mediumInteger('number_of_visitors')->nullable();
             $table->tinyInteger('number_of_departments')->nullable();
