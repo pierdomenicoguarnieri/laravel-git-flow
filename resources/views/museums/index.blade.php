@@ -22,16 +22,18 @@
             </tr>
           </thead>
           <tbody>
+            @foreach ($museums as $museum)
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
+              <th scope="row">{{$museum->id}}</th>
+              <td>{{$museum->name}}</td>
+              <td>{{$museum->geographic_coordinates}}</td>
               <td>
-                <a href="{{route('museums.show', 'ciao')}}" class="btn btn-primary">Vai</a>
-                <a href="{{route('museums.edit', 'ciao')}}" class="btn btn-warning">Modifica</a>
+                <a href="{{route('museums.show', $museum)}}" class="btn btn-primary">Vai</a>
+                <a href="{{route('museums.edit', $museum)}}" class="btn btn-warning">Modifica</a>
                 <a href="" class="btn btn-danger">Elimina</a>
               </td>
             </tr>
+            @endforeach
           </tbody>
         </table>
       </div>

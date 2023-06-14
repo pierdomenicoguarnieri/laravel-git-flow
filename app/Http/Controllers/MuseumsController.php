@@ -13,7 +13,8 @@ class MuseumsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-      return view('museums.index');
+      $museums = Museums::all();
+      return view('museums.index', compact('museums'));
     }
 
     /**
@@ -42,7 +43,7 @@ class MuseumsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Museums $museums){
-      return view('museums.show');
+      return view('museums.show', compact('museum'));
     }
 
     /**
@@ -52,7 +53,7 @@ class MuseumsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Museums $museums){
-      return view('museums.edit');
+      return view('museums.edit', compact('museum'));
     }
 
     /**
