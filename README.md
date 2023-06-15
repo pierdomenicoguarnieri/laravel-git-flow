@@ -5,4 +5,5 @@ Avrete la massima libertà nella struttura dei campi per le tabelle. L'important
 Siate creativi! Potete aggiungere tutte le funzionalità che desiderate, purché vi esercitiate nel lavoro di gruppo utilizzando GIT.
 L'obiettivo principale è imparare ad utilizzare il GITFlow in modo efficace, assicurandoci che più membri del team possano lavorare contemporaneamente sul progetto, gestendo correttamente i branch, i commit e le fusioni delle modifiche.
 Vi assicuro che è un'esperienza di lavoro di squadra coinvolgente e divertente!
-Buon lavoro!
+
+Modificare readme.
