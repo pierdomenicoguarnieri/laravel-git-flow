@@ -30,7 +30,7 @@ class ArtistController extends Controller
       $title = 'crea nuovo artista' . $artist->name . ' ' . $artist->surname ;
       $method = 'POST';
       $route = route('artists.store');
-      return view('artists.createedit', compact('artist','title', 'route'));
+      return view('artists.createedit', compact('artist','title', 'method', 'route'));
 
     }
 
@@ -41,7 +41,15 @@ class ArtistController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request){
+      $form_data = $request->all();
 
+      $new_artist = new Artist();
+
+      $new_artist->fill($form_data);
+
+      $new_artist->save();
+
+      return redirect()->route('artists.show', $new_artist);
     }
 
     /**
@@ -75,9 +83,9 @@ class ArtistController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Artist $artist){
-      $form = $request->all();
+      $form_data = $request->all();
 
-      $artist->update($form);
+      $artist->update($form_data);
       return redirect()->route('artists.show', $artist);
     }
 

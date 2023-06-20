@@ -14,7 +14,7 @@
 
   <form action="{{ $route }}" method="POST" enctype="multipart/form-data">
     @csrf
-    @method('{{$method}}')
+    @method($method)
     <div class="mb-3">
 
       <label for="name" class="form-label">name</label>
@@ -22,7 +22,7 @@
         id="name"
         name="name"
 
-        value="{{old('name', $artist->name)}}"
+        value="{{old('name', $artist?->name)}}"
 
         class="form-control"
         placeholder="name"
@@ -37,7 +37,7 @@
         id="surname"
         name="surname"
 
-        value="{{old('surname', $artist->name)}}"
+        value="{{old('surname', $artist?->surname)}}"
 
         class="form-control"
         placeholder="surname"
@@ -52,7 +52,7 @@
         id="date_of_birth"
         name="date_of_birth"
 
-        value="{{old('date_of_birth', $artist->name)}}"
+        value="{{old('date_of_birth', $artist?->date_of_birth)}}"
 
         class="form-control"
         placeholder="date_of_birth"
@@ -67,7 +67,7 @@
         id="date_of_death"
         name="date_of_death"
 
-        value="{{old('date_of_death', $artist->date_of_death)}}"
+        value="{{old('date_of_death', $artist?->date_of_death)}}"
 
         class="form-control"
         placeholder="date_of_death"
@@ -82,7 +82,7 @@
         id="place_of_birth"
         name="place_of_birth"
 
-        value="{{old('place_of_birth', $artist->place_of_birth)}}"
+        value="{{old('place_of_birth', $artist?->place_of_birth)}}"
 
         class="form-control"
         placeholder="place_of_birth"
@@ -97,7 +97,7 @@
         id="profession"
         name="profession"
 
-        value="{{old('profession', $artist->profession)}}"
+        value="{{old('profession', $artist?->profession)}}"
 
         class="form-control"
         placeholder="profession"
@@ -110,7 +110,7 @@
               id="art_movement"
               name="art_movement"
 
-              value="{{old('art_movement', $artist->art_movement)}}"
+              value="{{old('art_movement', $artist?->art_movement)}}"
 
               class="form-control"
               placeholder="art_movement"
@@ -125,7 +125,7 @@
               id="works"
               name="works"
 
-              value="{{old('works', $artist->name)}}"
+              value="{{old('works', $artist?->works)}}"
 
               class="form-control"
               placeholder="works"
@@ -144,7 +144,7 @@
               placeholder="inserisci testo"
               type="biography"
               >
-              {{old('biography', $artist->biography )}}
+              {{old('biography', $artist?->biography )}}
               </textarea>
               <div id="" class="form-text">messaggio errore</div>
             </div>
