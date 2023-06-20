@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Artist;
 
-class ArtisTableSeeder extends Seeder
+class ArtistTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
