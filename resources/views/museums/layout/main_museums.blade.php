@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <title>Dashboard Musei | @yield('title_museums')</title>
+      <title>Dashboard Musei | @yield('title')</title>
 
       <!-- Fonts -->
       <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
   <body>
     @include('partial.header')
 
-    @yield('content_museums')
+    @yield('content')
 
   </body>
 
