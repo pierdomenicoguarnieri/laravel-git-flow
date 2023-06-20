@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Museums;
+use App\Models\Museum;
 
 class MuseumTableSeeder extends Seeder
 {
@@ -18,7 +18,7 @@ class MuseumTableSeeder extends Seeder
         $museums = config('museums');
 
         foreach($museums as $museum){
-          $newMuseum = new Museums();
+          $newMuseum = new Museum();
           $newMuseum->name = $museum['name'];
           $newMuseum->founder = $museum['founder'];
           $newMuseum->construction_date = $museum['construction_date'];

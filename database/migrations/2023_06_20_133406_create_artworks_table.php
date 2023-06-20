@@ -16,7 +16,9 @@ return new class extends Migration
     Schema::create('artworks', function (Blueprint $table) {
       $table->id();
       $table->string('title');
-      $table->year('year')->nullable();
+      $table->string('type');
+      $table->text('description')->nullable();
+      $table->integer('year')->nullable();
       $table->string('artist')->nullable();
       $table->string('image_path')->nullable();
       $table->string('image_name')->nullable();

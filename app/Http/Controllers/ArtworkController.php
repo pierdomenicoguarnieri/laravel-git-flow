@@ -7,79 +7,79 @@ use Illuminate\Http\Request;
 
 class ArtworkController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
+  /**
+   * Display a listing of the resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function index(){
+    $artworks = Artwork::all();
+    return view('artworks.index', compact('artworks'));
+  }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+  /**
+   * Show the form for creating a new resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function create()
+  {
+    //
+  }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+  /**
+   * Store a newly created resource in storage.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @return \Illuminate\Http\Response
+   */
+  public function store(Request $request)
+  {
+    //
+  }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Artwork  $artwork
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Artwork $artwork)
-    {
-        //
-    }
+  /**
+   * Display the specified resource.
+   *
+   * @param  \App\Models\Artwork  $artwork
+   * @return \Illuminate\Http\Response
+   */
+  public function show(Artwork $artwork)
+  {
+    //
+  }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Artwork  $artwork
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Artwork $artwork)
-    {
-        //
-    }
+  /**
+   * Show the form for editing the specified resource.
+   *
+   * @param  \App\Models\Artwork  $artwork
+   * @return \Illuminate\Http\Response
+   */
+  public function edit(Artwork $artwork)
+  {
+    //
+  }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Artwork  $artwork
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Artwork $artwork)
-    {
-        //
-    }
+  /**
+   * Update the specified resource in storage.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @param  \App\Models\Artwork  $artwork
+   * @return \Illuminate\Http\Response
+   */
+  public function update(Request $request, Artwork $artwork)
+  {
+    //
+  }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Artwork  $artwork
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Artwork $artwork)
-    {
-        //
-    }
+  /**
+   * Remove the specified resource from storage.
+   *
+   * @param  \App\Models\Artwork  $artwork
+   * @return \Illuminate\Http\Response
+   */
+  public function destroy(Artwork $artwork)
+  {
+    //
+  }
 }
