@@ -3,6 +3,15 @@
 @section('title')
   Show
 @endsection
+@if ($errors->any())
+<div class="alert alert-danger" role="alert">
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 
 @section('content')
 
@@ -37,7 +46,7 @@
         id="surname"
         name="surname"
 
-        value="{{old('surname', $artist->name)}}"
+        value="{{old('surname', $artist->surname)}}"
 
         class="form-control"
         placeholder="surname"

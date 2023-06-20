@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artist;
 use Illuminate\Http\Request;
-use App\Http\Requests\PostRequest;
+use App\Http\Requests\ArtistRequest;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Composer;
 
@@ -40,7 +40,8 @@ class ArtistController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request){
+    public function store(ArtistRequest $request){
+
 
     }
 
@@ -74,7 +75,7 @@ class ArtistController extends Controller
      * @param  \App\Models\Artist  $artist
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Artist $artist){
+    public function update(ArtistRequest $request, Artist $artist){
       $form = $request->all();
 
       $artist->update($form);
