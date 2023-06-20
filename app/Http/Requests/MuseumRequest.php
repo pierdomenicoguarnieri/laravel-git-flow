@@ -27,6 +27,8 @@ class MuseumRequest extends FormRequest
             'name' => 'required|min:10|max:50',
             'founder' => 'required|min:10|max:50',
             'construction_date' => 'nullable',
+            'number_of_visitors' => 'nullable',
+            'number_of_departments'  => 'nullable',
             'geographic_coordinates' => 'required'
         ];
     }
