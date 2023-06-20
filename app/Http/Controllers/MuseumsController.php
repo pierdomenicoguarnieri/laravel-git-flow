@@ -65,7 +65,10 @@ class MuseumsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Museum $museums){
+      $form = $request->all();
 
+      $museums->update($form);
+      return redirect()->route('museums.show', $museums);
 
     }
 
@@ -75,7 +78,11 @@ class MuseumsController extends Controller
      * @param  \App\Models\Museums  $museums
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Museum $museums){
+    public function destroy($id){
+      $museum = Museum::find($id);
+
+      $museum->delete();
+      return redirect()->route('museums.index');
 
     }
 }

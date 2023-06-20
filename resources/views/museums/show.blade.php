@@ -20,7 +20,6 @@
             <li class="list-group-item">Numero di visitarori: <strong>{{$museum->number_of_visitors}}</strong></li>
             <li class="list-group-item">Numero di reparti: <strong>{{$museum->number_of_departments}}</strong></li>
             <li class="list-group-item">Coordinate Geografiche: <strong>{{$museum->geographic_coordinates}}</strong></li>
-
           </ul>
     </div>
   </main>

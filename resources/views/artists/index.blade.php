@@ -28,7 +28,11 @@
             <td>
               <a href="{{route('artists.show', $artist)}}" class="btn btn-primary">Vai</a>
               <a href="{{route('artists.edit', $artist)}}" class="btn btn-warning">Modifica</a>
-              <a href="" class="btn btn-danger">Elimina</a>
+              <form action="{{route('artists.destroy', $artist->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Sei sicuro di voler cancellare {{$artist->name}}?')">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger" title="elimina">Elimina</button>
+              </form>
             </td>
           </tr>
         @endforeach
