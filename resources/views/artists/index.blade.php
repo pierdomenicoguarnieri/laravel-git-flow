@@ -24,7 +24,11 @@
             <th>{{ $artist['id'] }}</th>
             <td>{{ $artist['name'] }}</td>
             <td>{{ $artist['surname'] }}</td>
-            <td><a class="btn" href="{{route('artists.show', $artist)}}">Dettagli</a></td>
+            <td>
+              <a href="{{route('artists.show', $artist)}}" class="btn btn-primary">Vai</a>
+              <a href="{{route('artists.edit', $artist)}}" class="btn btn-warning">Modifica</a>
+              <a href="" class="btn btn-danger">Elimina</a>
+            </td>
           </tr>
         @endforeach
       </tbody>
