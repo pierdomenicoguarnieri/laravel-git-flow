@@ -27,7 +27,6 @@ class ArtistTableSeeder extends Seeder
           $new_artist->art_movement = $artist['art_movement'];
           $new_artist->works = implode(' ',$artist['works']) ;
           $new_artist->biography = $artist['biography'];
-          // dd($new_artist);
           $new_artist->save();
         }
     }
