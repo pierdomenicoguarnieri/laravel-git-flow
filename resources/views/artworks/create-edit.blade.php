@@ -1,4 +1,4 @@
-@extends('artworks.layout.main_artworks')
+@extends('artworks.layout.main-artworks')
 
 @section('title')
   {{$title}}
@@ -67,12 +67,10 @@
       <textarea
         id="description"
         name="description"
-
-        value="{{old('description', $artwork->description)}}"
-
         class="form-control"
         placeholder="Descrizione..."
       >
+        {{old('description', $artwork->description)}}
       </textarea>
       <div id="" class="form-text">messaggio errore</div>
 
@@ -87,7 +85,7 @@
 
         class="form-control"
         placeholder="Anno"
-        type="text"
+        type="number"
       >
       <div id="" class="form-text">messaggio errore</div>
     </div>

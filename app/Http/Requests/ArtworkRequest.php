@@ -24,10 +24,10 @@ class ArtworkRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|min:20|max:255',
+            'title' => 'required|min:3|max:255',
             'type' => 'required',
             'description' => 'nullable',
-            'year' => 'nullable',
+            'year' => 'required',
             'image_path' => 'nullable',
             'image_name' => 'nullable'
         ];
@@ -36,7 +36,7 @@ class ArtworkRequest extends FormRequest
     public function messages(){
       return [
           'title.required' => 'Inserire il titolo',
-          'title.min' => 'Il titolo deve contenere almeno 20 caratteri',
+          'title.min' => 'Il titolo deve contenere almeno 3 caratteri',
           'title.max' => 'Il titolo non può contenere più di 255 caratteri',
           'type.required' => 'Inserire il tipo di opera'
       ];

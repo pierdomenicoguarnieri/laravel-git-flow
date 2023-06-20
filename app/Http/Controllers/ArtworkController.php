@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Artwork;
 use Illuminate\Http\Request;
+use App\Http\Requests\ArtworkRequest;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Composer;
 
 class ArtworkController extends Controller
 {
@@ -36,9 +39,29 @@ class ArtworkController extends Controller
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function store(Request $request)
+  public function store(ArtworkRequest $request, Artwork $artwork)
+
   {
-    //
+          // dd($request);
+      // classic storage
+      $form_data = $request;
+      $new_artwork = new Artwork;
+
+      $new_artwork->title = $form_data['title'];
+      $new_artwork->type = $form_data['type'];
+      $new_artwork->description = $form_data['description'];
+      $new_artwork->year = $form_data['year'];
+      $new_artwork->artist = $form_data['artist'];
+      $new_artwork->image_path = $form_data['image_path'];
+      $new_artwork->image_name = $form_data['image_name'];
+
+      // dd($new_artist);
+
+      // $new_artist->fill($request);
+
+      $new_artwork->save();
+
+    return redirect()->route('artworks.show', $new_artwork);
   }
 
   /**
@@ -49,7 +72,8 @@ class ArtworkController extends Controller
    */
   public function show(Artwork $artwork)
   {
-    //
+
+    return view('artworks.show',  compact('artwork'));
   }
 
   /**
@@ -73,9 +97,11 @@ class ArtworkController extends Controller
    * @param  \App\Models\Artwork  $artwork
    * @return \Illuminate\Http\Response
    */
-  public function update(Request $request, Artwork $artwork)
+  public function update(ArtworkRequest $request, Artwork $artwork)
   {
-    //
+    $form_data = $request->all();
+    $artwork->update($form_data);
+    return redirect()->route('artworks.show', $artwork);
   }
 
   /**
@@ -84,8 +110,10 @@ class ArtworkController extends Controller
    * @param  \App\Models\Artwork  $artwork
    * @return \Illuminate\Http\Response
    */
-  public function destroy(Artwork $artwork)
+  public function destroy($id)
   {
-    //
+    $artwork = Artwork::find($id);
+    $artwork->delete();
+    return redirect()->route('artworks.index');
   }
 }

@@ -1,35 +1,35 @@
-@extends('artists.layout.main_artists')
+@extends('artworks.layout.main-artworks')
 
 @section('title')
-  Show
+  {{$artwork->title}}
 @endsection
 
 @section('content')
-  <main class="container">
-    <div class="container my-5">
-      <h1>Show Opere D'Arte</h1>
-    </div>
+  <main class="container m-auto">
 
-    <div class="card w-50" style="width: 18rem;">
-      <img class="card-img-top">
-      <p>{{$artwork->image_name}}</p>
-      <div class="card-body">
+    <div class="card border-0 m-auto w-100 mt-4">
+
+      <div class="card-body m-auto w-90 text-center" >
         <h5 class="card-title">{{$artwork->title}}</h5>
-        <p class="card-text">{{$artist['description']}}</p>
+        <p class="card-text">{{$artwork->type . $artwork->year }}</p>
+        <p class="card-text">{{$artwork->artist}}</p>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{$artwork['year']}}</li>
-        <li class="list-group-item">{{$artwork['artist']}}</li>
-      </ul>
-      <div class="card-body">
-        <ul>
 
-          <li>{{$artist['works']}}</li>
+      <img
+      src="https://www.analisidellopera.it/wp-content/uploads/2018/01/Velazquez_Las_Meninas-1042x1200.jpg" class="card-img-top w-75 m-auto"
+      alt=""
+      >
 
-        </ul>
+      <div class="card-body m-auto w-90" >
+        <p class="card-text">{{$artwork->description}}</p>
+      </div>
+
+      <div class="card-body mb-4">
+
+        <a href="{{route('artworks.edit', $artwork)}}" class="btn btn-warning">Modifica</a>
+
       </div>
     </div>
-
 
   </main>
 @endsection
