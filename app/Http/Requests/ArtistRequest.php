@@ -24,13 +24,13 @@ class ArtistRequest extends FormRequest
     public function rules()
     {
       return [
-        'name' => 'required|min:10|max:255',
-        'surname' => 'required|min:10|max:252555',
-        'date_of_birth' => 'nullable',
+        'name' => 'required|min:2|max:255',
+        'surname' => 'required|min:2|max:255',
+        'date_of_birth' => 'required',
         'date_of_death' => 'nullable',
-        'place_of_birth' => 'nullable',
+        'place_of_birth' => 'required',
         'place_of_death' => 'nullable',
-        'profession' => 'nullable',
+        'profession' => 'required',
         'art_movement' => 'required',
         'works' => 'required',
         'biography' => 'nullable'

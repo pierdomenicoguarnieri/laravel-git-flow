@@ -41,14 +41,27 @@ class ArtistController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(ArtistRequest $request){
+    public function store(ArtistRequest  $request, Artist $artist ){
+      // dd($request);
+      // classic storage
+      $form_data = $request;
+      $new_artist =new Artist;
 
-      $new_artist = new Artist();
+      $new_artist->name = $form_data['name'];
+      $new_artist->surname = $form_data['surname'];
+      $new_artist->date_of_birth = $form_data['date_of_birth'];
+      $new_artist->date_of_death = $form_data['date_of_death'];
+      $new_artist->place_of_birth = $form_data['place_of_birth'];
+      $new_artist->place_of_death = $form_data['place_of_death'];
+      $new_artist->profession = $form_data['profession'];
+      $new_artist->art_movement = $form_data['art_movement'];
+      $new_artist->works = $form_data['works'];
+      $new_artist->biography = $form_data['biography'];
+      // dd($new_artist);
 
-      $new_artist->fill($form_data);
+      // $new_artist->fill($request);
 
       $new_artist->save();
-
       return redirect()->route('artists.show', $new_artist);
     }
 
@@ -83,7 +96,7 @@ class ArtistController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function update(Request $request, Artist $artist){
+    public function update(ArtistRequest $request, Artist $artist){
       $form_data = $request->all();
       $artist->update($form_data);
       return redirect()->route('artists.show', $artist);

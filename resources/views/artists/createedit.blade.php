@@ -30,14 +30,12 @@
       <input
         id="name"
         name="name"
-
-        value="{{old('name', $artist?->name)}}"
-
+        value="{{old('name', $artist->name)}}"
         class="form-control"
         placeholder="name"
         type="text"
       >
-      <div id="" class="form-text">messaggio errore</div>
+      <div id="" class="form-text">*</div>
 
         {{-- --------------------------- --}}
       <div class="mb-3">
@@ -45,12 +43,12 @@
       <input
         id="surname"
         name="surname"
-
+        value="{{old('surname', $artist->surname)}}"
         class="form-control"
         placeholder="surname"
         type="text"
       >
-      <div id="" class="form-text">messaggio errore</div>
+      <div id="" class="form-text">*</div>
     </div>
         {{-- --------------------------- --}}
 
@@ -59,13 +57,13 @@
         id="date_of_birth"
         name="date_of_birth"
 
-        value="{{old('date_of_birth', $artist?->date_of_birth)}}"
+        value="{{old('date_of_birth', $artist->date_of_birth)}}"
 
         class="form-control"
         placeholder="date_of_birth"
-        type="text"
+        type="date"
       >
-      <div id="" class="form-text">messaggio errore</div>
+      <div id="" class="form-text">*</div>
 
         {{-- --------------------------- --}}
 
@@ -74,7 +72,7 @@
         id="date_of_death"
         name="date_of_death"
 
-        value="{{old('date_of_death', $artist?->date_of_death)}}"
+        value="{{old('date_of_death', $artist->date_of_death)}}"
 
         class="form-control"
         placeholder="date_of_death"
@@ -89,13 +87,13 @@
         id="place_of_birth"
         name="place_of_birth"
 
-        value="{{old('place_of_birth', $artist?->place_of_birth)}}"
+        value="{{old('place_of_birth', $artist->place_of_birth)}}"
 
         class="form-control"
         placeholder="place_of_birth"
         type="text"
       >
-      <div id="" class="form-text">messaggio errore</div>
+      <div id="" class="form-text">*</div>
     </div>
         {{-- --------------------------- --}}
 
@@ -104,7 +102,7 @@
         id="profession"
         name="profession"
 
-        value="{{old('profession', $artist?->profession)}}"
+        value="{{old('profession', $artist->profession)}}"
 
         class="form-control"
         placeholder="profession"
@@ -117,13 +115,13 @@
               id="art_movement"
               name="art_movement"
 
-              value="{{old('art_movement', $artist?->art_movement)}}"
+              value="{{old('art_movement', $artist->art_movement)}}"
 
               class="form-control"
               placeholder="art_movement"
               type="text"
             >
-            <div id="" class="form-text">messaggio errore</div>
+            <div id="" class="form-text">*</div>
 
               {{-- --------------------------- --}}
 
@@ -132,13 +130,13 @@
               id="works"
               name="works"
 
-              value="{{old('works', $artist?->works)}}"
+              value="{{old('works', $artist->works)}}"
 
               class="form-control"
               placeholder="works"
               type="text"
             >
-            <div id="" class="form-text">messaggio errore</div>
+            <div id="" class="form-text">*</div>
             <div class="mb-3">
 
               <label for="biography" class="form-label">biography</label>
@@ -151,9 +149,9 @@
               placeholder="inserisci testo"
               type="biography"
               >
-              {{old('biography', $artist?->biography )}}
+              {{old('biography', $artist->biography )}}
               </textarea>
-              <div id="" class="form-text">messaggio errore</div>
+              <div id="" class="form-text"></div>
             </div>
             {{-- --------------------------- --}}
 
