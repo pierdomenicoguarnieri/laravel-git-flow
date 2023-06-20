@@ -22,9 +22,12 @@ class ArtworkController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function create()
+  public function create(Artwork $artwork)
   {
-    //
+    $title = 'Nuova opera d\'arte';
+    $method = 'POST';
+    $route = route('artworks.store');
+    return view('artworks.create-edit', compact('title','method','route', 'artwork'));
   }
 
   /**
@@ -57,7 +60,10 @@ class ArtworkController extends Controller
    */
   public function edit(Artwork $artwork)
   {
-    //
+    $title = 'Edit:' . ' ' . $artwork->title;
+    $method = 'PUT';
+    $route = route('artworks.update', $artwork);
+    return view('artworks.create-edit', compact('artwork','title','method','route'));
   }
 
   /**
