@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Artist;
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Composer;
 
 class ArtistController extends Controller
 {
@@ -22,7 +25,12 @@ class ArtistController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(){
+    public function create(Artist $artist){
+      $new_artist = new Artist();
+      $title = 'crea nuovo artista' . $artist->name . ' ' . $artist->surname ;
+      $method = 'POST';
+      $route = route('artists.store');
+      return view('artists.createedit', compact('artist','title', 'route'));
 
     }
 
@@ -53,7 +61,10 @@ class ArtistController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Artist $artist){
-
+      $title = 'edita artista:' . $artist->name . ' ' . $artist->surname ;
+      $method = 'PUT';
+      $route = route('artists.update', $artist);
+      return view('artists.createedit', compact('artist','title', 'route'));
     }
 
     /**
@@ -64,7 +75,10 @@ class ArtistController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Artist $artist){
+      $form = $request->all();
 
+      $artist->update($form);
+      return redirect()->route('artists.show', $artist);
     }
 
     /**
@@ -74,6 +88,8 @@ class ArtistController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Artist $artist){
+      $artist->delete();
+      return redirect()->route('artists.index', $artist);
 
     }
 }
