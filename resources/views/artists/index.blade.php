@@ -7,7 +7,7 @@
 @section('content_artists')
 
   <main class="container">
-    <div class="btn">
+    <div class="btn btn-dark mt-4 ">
       <a href="{{route('artists.create')}}">new artist</a>
     </div>
     <div class="container my-5">
