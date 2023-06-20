@@ -8,10 +8,9 @@
   <main class="container">
     <div class="container my-5">
       <h1>Index Opere D'Arte</h1>
-
-      <a href="{{route('artworks.create')}}" class="btn btn-success mb-2">Crea un nuovo museo</a>
-
     </div>
+      <a href="{{route('artworks.create')}}" class="btn btn-success mb-4">Crea un nuovo museo</a>
+
     <table class="table ">
       <thead>
         <tr>

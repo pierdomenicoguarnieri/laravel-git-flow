@@ -9,7 +9,7 @@
     <div class="container my-5">
       <h1 class="mb-2">Index Musei</h1>
 
-      <a href="{{route('museums.create')}}" class="btn btn-success mb-2">Crea un nuovo museo</a>
+      <a href="{{route('museums.create')}}" class="btn btn-success mb-4">Crea un nuovo museo</a>
 
       <div class="pg-table-wrapper">
         <table class="table">

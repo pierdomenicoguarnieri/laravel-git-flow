@@ -8,10 +8,9 @@
   <main class="container">
     <div class="container my-5">
       <h1>Index Artisti</h1>
-    </div>
-    <div class="btn btn-dark"><a class="" href="{{route('artists.create')}}">crea</a></div>
-    <table class="table ">
-      <thead>
+      <a class="btn btn-success mb-4" href="{{route('artists.create')}}">Crea un nuovo artista</a>
+      <table class="table ">
+        <thead>
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Nome</th>
@@ -22,21 +21,22 @@
       <tbody>
         @foreach ($artists as $artist )
         <tr>
-            <th>{{ $artist['id'] }}</th>
-            <td>{{ $artist['name'] }}</td>
-            <td>{{ $artist['surname'] }}</td>
-            <td>
-              <a href="{{route('artists.show', $artist)}}" class="btn btn-primary">Vai</a>
-              <a href="{{route('artists.edit', $artist)}}" class="btn btn-warning">Modifica</a>
-              <form action="{{route('artists.destroy', $artist->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Sei sicuro di voler cancellare {{$artist->name}}?')">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-danger" title="elimina">Elimina</button>
-              </form>
-            </td>
-          </tr>
+          <th>{{ $artist['id'] }}</th>
+          <td>{{ $artist['name'] }}</td>
+          <td>{{ $artist['surname'] }}</td>
+          <td>
+            <a href="{{route('artists.show', $artist)}}" class="btn btn-primary">Vai</a>
+            <a href="{{route('artists.edit', $artist)}}" class="btn btn-warning">Modifica</a>
+            <form action="{{route('artists.destroy', $artist->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Sei sicuro di voler cancellare {{$artist->name}}?')">
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="btn btn-danger" title="elimina">Elimina</button>
+            </form>
+          </td>
+        </tr>
         @endforeach
       </tbody>
-    </table>
+      </table>
+    </div>
   </main>
 @endsection
