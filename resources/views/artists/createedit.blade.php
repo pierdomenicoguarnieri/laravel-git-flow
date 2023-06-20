@@ -1,10 +1,10 @@
 @extends('artists.layout.main_artists')
 
-@section('title_artists')
+@section('title')
   Show
 @endsection
 
-@section('content_artists')
+@section('content')
 
 <div class="container p-3 text-center">
 

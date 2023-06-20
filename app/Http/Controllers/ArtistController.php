@@ -64,7 +64,7 @@ class ArtistController extends Controller
       $title = 'edita artista:' . $artist->name . ' ' . $artist->surname ;
       $method = 'PUT';
       $route = route('artists.update', $artist);
-      return view('artists.createedit', compact('artist','title', 'route'));
+      return view('artists.createedit', compact('artist','title','method','route'));
     }
 
     /**
