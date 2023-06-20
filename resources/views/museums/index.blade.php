@@ -30,7 +30,13 @@
               <td>
                 <a href="{{route('museums.show', $museum)}}" class="btn btn-primary">Vai</a>
                 <a href="{{route('museums.edit', $museum)}}" class="btn btn-warning">Modifica</a>
-                <a href="" class="btn btn-danger">Elimina</a>
+
+                <form action="{{route('museums.destroy', $museum->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Sei sicuro di voler cancellare {{$museum->name}}?')">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-danger" title="elimina">Elimina</button>
+                </form>
+
               </td>
             </tr>
             @endforeach
