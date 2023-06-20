@@ -9,12 +9,28 @@
 <div class="container p-3 text-center">
 
   <h1 class="fs-2 text-secondary my-4">{{$title}}</h1>
+
+  @if ($errors->any())
+
+    <div class="alert alert-danger" role="alert">
+
+      <ul>
+          @foreach ($errors->all() as $error)
+              <li>{{$error}}</li>
+          @endforeach
+      </ul>
+
+
+    </div>
+
+  @endif
+
 <div class="container">
 
 
   <form action="{{ $route }}" method="POST" enctype="multipart/form-data">
     @csrf
-    @method('{{$method}}')
+    @method($method)
     <div class="mb-3">
 
       <label for="title" class="form-label">Titolo</label>
