@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <title>Dashboard Artisti | @yield('title_artists')</title>
+      <title>Dashboard Artisti | @yield('title')</title>
 
       <!-- Fonts -->
       <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
   <body>
     @include('partial.header')
 
-    @yield('content_artists')
+    @yield('content')
 
   </body>
 
