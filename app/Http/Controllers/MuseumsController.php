@@ -53,6 +53,7 @@ class MuseumsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Museum $museum){
+
       return view('museums.edit', compact('museum'));
     }
 
@@ -64,6 +65,7 @@ class MuseumsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Museum $museums){
+
 
     }
 
