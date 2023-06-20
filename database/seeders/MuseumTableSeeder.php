@@ -18,7 +18,7 @@ class MuseumTableSeeder extends Seeder
         $museums = config('museums');
 
         foreach($museums as $museum){
-          $newMuseum = new Museums();
+          $newMuseum = new Museum();
           $newMuseum->name = $museum['name'];
           $newMuseum->founder = $museum['founder'];
           $newMuseum->construction_date = $museum['construction_date'];
