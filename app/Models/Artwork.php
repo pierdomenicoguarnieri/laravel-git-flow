@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Museum;
 
 class Artwork extends Model
 {
@@ -23,4 +24,8 @@ class Artwork extends Model
     'profession',
     'image_name',
   ];
+
+  public function museum(){
+    $this->belongsTo(Museum::class);
+  }
 }
