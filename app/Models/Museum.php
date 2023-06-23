@@ -12,4 +12,13 @@ class Museum extends Model{
   public function artworks(){
     $this->hasMany(Artwork::class);
   }
+  
+  protected $fillable = [
+    'name',
+    'founder',
+    'construction_date',
+    'number_of_visitors',
+    'number_of_departments',
+    'geographic_coordinates',
+  ];
 }
