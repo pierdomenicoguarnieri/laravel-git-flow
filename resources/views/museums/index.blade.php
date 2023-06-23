@@ -17,6 +17,7 @@
             <tr>
               <th scope="col">#ID</th>
               <th scope="col">Name</th>
+              <th scope="col">Opere d'arte</th>
               <th scope="col">Coordinate Geografiche</th>
               <th scope="col">Azioni</th>
             </tr>
@@ -26,6 +27,7 @@
             <tr>
               <th scope="row">{{$museum->id}}</th>
               <td>{{$museum->name}}</td>
+              <td>{{$museum->artworks}}</td>
               <td>{{$museum->geographic_coordinates}}</td>
               <td>
                 <a href="{{route('museums.show', $museum)}}" class="btn btn-primary">Vai</a>
