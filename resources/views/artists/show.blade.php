@@ -26,13 +26,15 @@
       </ul>
       <div class="card-body">
         <ul>
-
-          <li>{{$artist['works']}}</li>
-
+          <ul>
+            @foreach($artist->artworks as $artwork )
+            <li>
+              {{$artwork?->title }}
+            </li>
+            @endforeach
+          </ul>
         </ul>
       </div>
     </div>
-
-
   </main>
 @endsection
