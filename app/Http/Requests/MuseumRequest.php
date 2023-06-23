@@ -24,9 +24,9 @@ class MuseumRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:10|max:50',
-            'founder' => 'required|min:10|max:50',
-            'construction_date' => 'nullable',
+            'name' => 'required|min:3|max:50',
+            'founder' => 'required|min:3|max:50',
+            'construction_date' => 'required',
             'number_of_visitors' => 'nullable',
             'number_of_departments'  => 'nullable',
             'geographic_coordinates' => 'required'
@@ -36,11 +36,11 @@ class MuseumRequest extends FormRequest
     public function messages(){
       return [
         'name.required' => 'Inserisci il nome',
-        'name.min' => 'Il nome deve contenere almeno 10 caratteri',
-        'name.max' => 'Il nome non può superare i 50 caratteri',
+        'name.min' => 'Il nome deve contenere almeno 3 caratteri',
+        'name.max' => 'Il nome non può superare i 255 caratteri',
         'founder.required' => 'Inserisci il nome',
-        'founder.min' => 'Il nome deve contenere almeno 10 caratteri',
-        'founder.max' => 'Il nome non può superare i 50 caratteri',
+        'founder.min' => 'Il nome deve contenere almeno 5 caratteri',
+        'founder.max' => 'Il nome non può superare i 255 caratteri',
         'geographic_coordinates.required' => 'Le coordinate geografiche sono richieste'
       ];
     }

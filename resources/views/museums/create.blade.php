@@ -17,23 +17,23 @@
         </div>
         <div class="mb-3">
           <label for="founder" class="form-label">Fondatore</label>
-          <input type="text" class="form-control" id="founder" name="founder"></input>
+          <input type="text" class="form-control" id="founder" name="founder">
         </div>
         <div class="mb-3">
           <label for="construction_date" class="form-label">Data di costruzione</label>
-          <input type="text" class="form-control" id="construction_date" name="construction_date"></input>
+          <input type="date" class="form-control" id="construction_date" name="construction_date">
         </div>
         <div class="mb-3">
           <label for="number_of_visitors" class="form-label">Numero di visitatori</label>
-          <input type="text" class="form-control" id="number_of_visitors" name="number_of_visitors"></input>
+          <input type="number" class="form-control" id="number_of_visitors" name="number_of_visitors">
         </div>
         <div class="mb-3">
           <label for="number_of_departments" class="form-label">Numero di reparti</label>
-          <input type="text" class="form-control" id="number_of_departments" name="number_of_departments"></input>
+          <input type="number" class="form-control" id="number_of_departments" name="number_of_departments">
         </div>
         <div class="mb-3">
           <label for="geographic_coordinates" class="form-label">Coordinate geografiche</label>
-          <input type="text" class="form-control" id="geographic_coordinates" name="geographic_coordinates"></input>
+          <input type="text" class="form-control" id="geographic_coordinates" name="geographic_coordinates">
         </div>
         <div class="input-group mb-3">
           <input type="file" class="form-control" id="image">
