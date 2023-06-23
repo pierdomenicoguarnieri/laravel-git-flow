@@ -15,6 +15,7 @@
           <th scope="col">ID</th>
           <th scope="col">Nome</th>
           <th scope="col">Cognome</th>
+          <th scope="col">opere</th>
           <th scope="col">Azioni</th>
         </tr>
       </thead>
@@ -24,6 +25,18 @@
           <th>{{ $artist['id'] }}</th>
           <td>{{ $artist['name'] }}</td>
           <td>{{ $artist['surname'] }}</td>
+
+          <td>
+            <ul>
+              @foreach($artist->artworks as $artwork )
+              <li>
+                {{$artwork?->title }}
+              </li>
+
+              @endforeach
+            </ul>
+          </td>
+
           <td class="col-4">
             <a href="{{route('artists.show', $artist)}}" class="btn btn-primary">Vai</a>
             <a href="{{route('artists.edit', $artist)}}" class="btn btn-warning">Modifica</a>
