@@ -26,6 +26,6 @@ class Artwork extends Model
   ];
 
   public function museum(){
-    $this->belongsTo(Museum::class);
+    return $this->belongsTo(Museum::class);
   }
 }

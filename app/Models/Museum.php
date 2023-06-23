@@ -10,9 +10,9 @@ class Museum extends Model{
   use HasFactory;
 
   public function artworks(){
-    $this->hasMany(Artwork::class);
+    return $this->hasMany(Artwork::class);
   }
-  
+
   protected $fillable = [
     'name',
     'founder',
