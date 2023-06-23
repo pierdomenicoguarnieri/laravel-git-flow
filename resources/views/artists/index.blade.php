@@ -27,14 +27,15 @@
           <td>{{ $artist['surname'] }}</td>
 
           <td>
+
             <ul>
               @foreach($artist->artworks as $artwork )
               <li>
                 {{$artwork?->title }}
               </li>
-
               @endforeach
             </ul>
+
           </td>
 
           <td class="col-4">
