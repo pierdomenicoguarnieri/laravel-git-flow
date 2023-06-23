@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Artwork;
 use App\Models\Museum;
 
 class MuseumTableSeeder extends Seeder
@@ -19,6 +20,7 @@ class MuseumTableSeeder extends Seeder
 
         foreach($museums as $museum){
           $newMuseum = new Museum();
+          $newMuseum->artwork_id = Artwork::inRandomOrder()->first()->id;
           $newMuseum->name = $museum['name'];
           $newMuseum->founder = $museum['founder'];
           $newMuseum->construction_date = $museum['construction_date'];
